@@ -52,7 +52,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open"/>
                                 <connections>
-                                    <segue destination="A6Q-nx-xad" kind="show" id="yop-8E-RN2"/>
+                                    <segue destination="A6Q-nx-xad" kind="show" identifier="openColor" id="yop-8E-RN2"/>
                                 </connections>
                             </button>
                         </subviews>
