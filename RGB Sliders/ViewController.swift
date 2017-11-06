@@ -19,9 +19,13 @@ class ViewController: UIViewController {
         
         // Load preferences
         let defaults = UserDefaults.standard
-        redSlider.value = defaults.float(forKey: "red")
-        greenSlider.value = defaults.float(forKey: "green")
-        blueSlider.value = defaults.float(forKey: "blue")
+        if defaults.bool(forKey: "hasRun") {
+            redSlider.value = defaults.float(forKey: "red")
+            greenSlider.value = defaults.float(forKey: "green")
+            blueSlider.value = defaults.float(forKey: "blue")
+        }else{
+            defaults.set(true, forKey: "hasRun")
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
         updateBackgroundColor()

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,38 +19,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ypj-Eb-Rlj">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ypj-Eb-Rlj">
                                 <rect key="frame" x="14" y="233" width="292" height="31"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="updateBackgroundColor" destination="BYZ-38-t0r" eventType="valueChanged" id="Z2K-Fb-Zg6"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-ht-PiP">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-ht-PiP">
                                 <rect key="frame" x="14" y="270" width="292" height="31"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="updateBackgroundColor" destination="BYZ-38-t0r" eventType="valueChanged" id="pwo-QO-fIl"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-Ti-Wr8">
-                                <rect key="frame" x="14" y="307" width="292" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-Ti-Wr8">
+                                <rect key="frame" x="14" y="306" width="292" height="31"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="updateBackgroundColor" destination="BYZ-38-t0r" eventType="valueChanged" id="wfE-tU-sex"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVS-o4-OR5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVS-o4-OR5">
                                 <rect key="frame" x="137" y="361" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open"/>
                                 <connections>
                                     <segue destination="A6Q-nx-xad" kind="show" identifier="openColor" id="yop-8E-RN2"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1b-3s-cq5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1b-3s-cq5">
                                 <rect key="frame" x="140" y="185" width="40" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -60,8 +58,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ypj-Eb-Rlj" firstAttribute="centerX" secondItem="S1b-3s-cq5" secondAttribute="centerX" id="0f2-ND-qL3"/>
+                            <constraint firstItem="hY4-ht-PiP" firstAttribute="top" secondItem="Ypj-Eb-Rlj" secondAttribute="bottom" constant="7" id="5ah-lM-kKG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YVS-o4-OR5" secondAttribute="bottom" constant="177" id="9ac-HE-Zui"/>
+                            <constraint firstItem="bk7-Ti-Wr8" firstAttribute="leading" secondItem="hY4-ht-PiP" secondAttribute="leading" id="D0G-ox-tnu"/>
+                            <constraint firstItem="Ypj-Eb-Rlj" firstAttribute="leading" secondItem="hY4-ht-PiP" secondAttribute="leading" id="L72-II-iKr"/>
+                            <constraint firstItem="bk7-Ti-Wr8" firstAttribute="trailing" secondItem="hY4-ht-PiP" secondAttribute="trailing" id="L7t-ZZ-9eH"/>
+                            <constraint firstItem="Ypj-Eb-Rlj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="233" id="Rsw-i9-xZf"/>
+                            <constraint firstItem="Ypj-Eb-Rlj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Skh-sC-59q"/>
                             <constraint firstItem="Ypj-Eb-Rlj" firstAttribute="top" secondItem="S1b-3s-cq5" secondAttribute="bottom" constant="8" id="YwQ-hL-TH6"/>
                             <constraint firstItem="S1b-3s-cq5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b6A-T0-zCD"/>
+                            <constraint firstItem="bk7-Ti-Wr8" firstAttribute="top" secondItem="hY4-ht-PiP" secondAttribute="bottom" constant="6" id="bLV-yc-tQ5"/>
+                            <constraint firstItem="YVS-o4-OR5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="fE5-k5-L71"/>
+                            <constraint firstItem="Ypj-Eb-Rlj" firstAttribute="centerX" secondItem="YVS-o4-OR5" secondAttribute="centerX" id="rtL-TU-VeV"/>
+                            <constraint firstItem="Ypj-Eb-Rlj" firstAttribute="trailing" secondItem="hY4-ht-PiP" secondAttribute="trailing" id="toA-NW-gar"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
